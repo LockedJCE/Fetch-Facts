@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="assets\css\style.css" />
+    <link rel="stylesheet" href="./assets\css\style.css" />
     <title>Trivia!</title>
 </head>
 <body class="is-justify-content-center is-align-items-center">
@@ -42,7 +42,23 @@
     </div>
   </section>
 
+  <button class="js-modal-trigger button is-medium is-danger" data-target="trivia-settings">
+    Settings
+  </button>
 
-<script src="assets\js\script.js"></script>
+  <div id="trivia-settings" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <p>Trivia Settings!</p>
+        <!-- Your content -->
+      </div>
+    </div>
+  
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+<script src="./assets\js\script.js"></script>
 </body>
 </html>
