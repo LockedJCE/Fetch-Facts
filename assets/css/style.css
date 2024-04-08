@@ -1,0 +1,31 @@
+:root {
+    --bulma-info-75: hsla(
+        var(--bulma-primary),
+        var(--bulma-info-h),
+        var(--bulma-info-s),
+        var(--bulma-info-75-l),
+      1
+      );
+  }
+
+* {
+    background-color: var(--bulma-primary);
+}
+
+
+body {
+
+}
+
+.wrapper {
+
+}
+
+.container quiz-body {
+
+}
+
+.js-modal-trigger {
+
+}
+
