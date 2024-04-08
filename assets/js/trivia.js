@@ -2,7 +2,6 @@ const questionHeader = $("#question");
 const quizOptions = $(".quiz-options");
 const settingsModal = $("#trivia-settings");
 const resultDiv = $("#result");
-let score = parseInt(localStorage.getItem('quizScore')) || 0;
 
 // Get initial trivia question
 function fetchTriviaQuestion() {
@@ -91,5 +90,6 @@ function checkAnswer(selectedOption, correctAnswer) {
 }
 
 function displayScore() {
+    let score = parseInt(localStorage.getItem('quizScore')) || 0;
     $("#total-score").text(`Score: ${score}`);
 }
