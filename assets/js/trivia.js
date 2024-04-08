@@ -7,7 +7,24 @@ let score = parseInt(localStorage.getItem('quizScore')) || 0;
 // Get initial trivia question
 function fetchTriviaQuestion() {
     $('.quiz-option-button').prop('disabled', false).removeClass('is-disabled');
-    fetch('https://opentdb.com/api.php?amount=1')
+
+    let apiURL = 'https://opentdb.com/api.php?amount=1';
+    const selectedCategory = $('#category-dropdown').val();
+    const selectedDifficulty = $('#difficulty-dropdown').val();
+
+    
+    // Check for the Any Category selection, if not selected, get the category that is selected
+    if (selectedCategory !== 'any') {
+        apiURL += `&category=${selectedCategory}`;
+    }
+
+    // Same thing for the difficulty, 
+    if (selectedDifficulty !== 'any') {
+        apiURL += `&difficulty=${selectedDifficulty}`;
+    }
+    console.log(apiURL);
+
+    fetch(apiURL)
     .then(response => response.json())
     .then(function (data) {
         if (data.response_code !== 0) {
