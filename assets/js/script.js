@@ -1,3 +1,4 @@
+const playButton = $("#play-again");
 
 
 // Shuffling array
@@ -8,3 +9,23 @@ function shuffleArray(array) {
     }
 }
 
+// Play again button
+playButton.on('click', function() {
+    fetchTriviaQuestion();
+}); 
+
+// When document finishes loading
+$(document).ready(function() {
+    fetchTriviaQuestion();
+    displayScore();
+});
+
+// Something I found online to decode HTML since our API is encoded
+function decodeHtmlEntities(text) {
+    // Create a temporary div element
+    var tempDiv = document.createElement("div");
+    // Set the encoded HTML as the text of the div
+    tempDiv.innerHTML = text;
+    // Extract and return the decoded text from the div
+    return tempDiv.textContent || tempDiv.innerText || "";
+}
