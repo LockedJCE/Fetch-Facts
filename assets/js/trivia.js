@@ -12,7 +12,6 @@ function fetchTriviaQuestion() {
     .then(function (data) {
         if (data.response_code !== 0) {
                 // 0 - success, 1 - no results, 2 - invalid parameter, 3 - token not found, 4 - token empty, 5 - rate limit
-            questionHeader.textContent = "Error from the Trivia API";
             throw new Error('Error from the Trivia API. Response code: ' + data.response_code);
         }
         // Decode all the text
@@ -34,9 +33,9 @@ function displayQuestion(questionData) {
     shuffleArray(options);
 
     options.forEach(option => {
-        
-        const listItem = $('<li>').addClass('column is-one-quarter');
-        const button = $('<button>').addClass('quiz-option-button button is-info').text(option);
+
+        const listItem = $('<li>').addClass('column is-one-quarter').addClass('question-buttons');
+        const button = $('<button>').addClass('quiz-option-button button is-info').addClass('question-buttons').text(option);
         
         // Event listener for answer checking
         button.on('click', function() {
