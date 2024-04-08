@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Get categories from the API
+    function dropdownCategories() {
+        const categoriesUrl = 'https://opentdb.com/api_category.php';
+        fetch(categoriesUrl)
+            .then(response => response.json())
+            .then(data => {
+                const categoryDropdown = $('#category-dropdown');
+                data.trivia_categories.forEach(category => {
+                    // Create dropdown options
+                    categoryDropdown.append($('<option>').val(category.id).text(category.name));
+                });
+            });
+    }
+    // Fill difficulty dropdown
+    function dropdownDifficulties() {
+        const difficulties = ['Easy', 'Medium', 'Hard'];
+        const difficultyDropdown = $('#difficulty-dropdown');
+    
+        difficulties.forEach(difficulty => {
+            // Create dropdown options
+            difficultyDropdown.append($('<option>').val(difficulty.toLowerCase()).text(difficulty));
+        });
+    }
+
+    // Call both those functions
+    dropdownCategories();
+    dropdownDifficulties();
+
+
     // Functions to open and close a modal
     function openModal($el) {
       $el.classList.add('is-active');

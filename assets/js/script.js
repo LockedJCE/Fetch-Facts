@@ -1,4 +1,5 @@
 const playButton = $("#play-again");
+const resetButton = $("#reset-score");
 
 
 // Shuffling array
@@ -12,6 +13,11 @@ function shuffleArray(array) {
 // Play again button
 playButton.on('click', function() {
     fetchTriviaQuestion();
+});
+
+resetButton.on('click', function() {
+    localStorage.setItem('quizScore', toString(0));
+    displayScore();
 }); 
 
 // When document finishes loading
