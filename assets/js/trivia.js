@@ -82,6 +82,7 @@ function checkAnswer(selectedOption, correctAnswer) {
         resultHeader.text(`Incorrect. The correct answer was: ${correctAnswer}`).addClass('has-text-danger');
         score--;
     }
+    fetchDogImage();
 
     // Set and get score
     localStorage.setItem('quizScore', score);
