@@ -8,17 +8,39 @@
       "SHLN" 34.9;
       font-size: 45px
   }
-  
+/* area with quiz question and quiz options */
 .container {
     display: grid;
-    grid-template-areas: auto auto;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
+}
+
+#question {
+    text-align: center;
+}
+
+.quiz-foot {
+    text-align: center;
 }
 
 .quiz-question {
     grid-row: 1;
+    font-size: x-large;
 }
 
 .quiz-options {
     grid-row: 2;
+    font-size: x-large;
+}
+
+/* score */
+.box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
