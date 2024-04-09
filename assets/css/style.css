@@ -56,3 +56,11 @@
     width: 100%;
     text-align: center;
 }
+
+#dog-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding-top: 200px;
+}
