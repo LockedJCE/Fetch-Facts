@@ -21,7 +21,6 @@
 }
 
 .quiz-buttons {
-    position: fixed;
     bottom: 0;
     width: 100%;
     padding: 20%;
@@ -62,5 +61,4 @@
     margin-left: auto;
     margin-right: auto;
     width: 20%;
-    padding-top: 200px;
 }
