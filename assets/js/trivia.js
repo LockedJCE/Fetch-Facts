@@ -51,7 +51,7 @@ function displayQuestion(questionData) {
 
     options.forEach(option => {
 
-        const listItem = $('<li>').addClass('column is-one-quarter').addClass('question-buttons');
+        const listItem = $('<li>').addClass('column is-one-quarter').addClass('question-list');
         const button = $('<button>').addClass('quiz-option-button button is-info').addClass('question-buttons').text(option);
         
         // Event listener for answer checking
