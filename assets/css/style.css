@@ -20,18 +20,30 @@
     text-align: center;
 }
 
+.quiz-buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20%;
+}
+/* area with play again and reset score buttons */
 .quiz-foot {
     text-align: center;
 }
 
 .quiz-question {
     grid-row: 1;
-    font-size: x-large;
+    font-size: 40px;
+    background-color: rgb(239, 175, 175)(215, 134, 134);
 }
 
 .quiz-options {
     grid-row: 2;
-    font-size: x-large;
+    font-size: 20px;
+}
+
+.column {
+    text-align: center;
 }
 
 /* score */
