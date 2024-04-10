@@ -23,6 +23,7 @@ resetButton.on('click', function() {
 // When document finishes loading
 $(document).ready(function() {
     fetchTriviaQuestion();
+    fetchDogImage();
     displayScore();
 });
 

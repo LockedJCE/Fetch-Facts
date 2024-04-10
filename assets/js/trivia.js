@@ -40,26 +40,26 @@ function fetchTriviaQuestion() {
     });
 }
 
-// Display question and answers
 function displayQuestion(questionData) {
     questionHeader.text(questionData.question);
     quizOptions.empty();
-    resultDiv.empty(); // Clear the result
+    resultDiv.empty()
 
     const options = [questionData.correct_answer, ...questionData.incorrect_answers];
     shuffleArray(options);
 
     options.forEach(option => {
+        const listItem = $('<li>');
+        const button = $('<button>')
+            .addClass('quiz-option-button button is-info')
+            .text(option);
 
-        const listItem = $('<li>').addClass('column is-one-quarter').addClass('question-list');
-        const button = $('<button>').addClass('quiz-option-button button is-info').addClass('question-buttons').text(option);
-        
         // Event listener for answer checking
         button.on('click', function() {
             checkAnswer(option, questionData.correct_answer);
             disableOptions();
         });
-        
+
         listItem.append(button);
         quizOptions.append(listItem);
     });
