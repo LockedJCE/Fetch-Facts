@@ -50,9 +50,7 @@ function displayQuestion(questionData) {
 
     options.forEach(option => {
         const listItem = $('<li>');
-        const button = $('<button>')
-            .addClass('quiz-option-button button')
-            .text(option);
+        const button = $('<button>').addClass('quiz-option-button button').text(option);
 
         // Event listener for answer checking
         button.on('click', function() {
