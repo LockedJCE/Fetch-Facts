@@ -203,3 +203,7 @@ option {
 .right-btn {
     margin-left: 5px;
 }
+
+#total-score {
+    color: var(--font);
+}
