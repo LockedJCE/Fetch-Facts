@@ -105,3 +105,11 @@
     margin-right: auto;
     width: 20%;
 }
+
+.js-modal-trigger {
+    color: var(--font);
+}
+
+.navbar-link {
+    color: var(--font);
+}
