@@ -16,6 +16,10 @@ body {
     height: 100vh;
 }
 
+#grad {
+    background-image: linear-gradient(to bottom, #224058 60%, #eb9e5f);
+  }
+
 .honk-titlefont {
     font-family: "Honk", system-ui;
     font-optical-sizing: auto;
