@@ -5,6 +5,8 @@
     --font: #eb9e5f;
     --play: #ef8989;
     --again: #719ff4;
+    --black: #000000;
+    --dark: #abb1bf;
 }
 
 * {
@@ -20,16 +22,12 @@ body {
     background-image: linear-gradient(to bottom, #224058 60%, #eb9e5f);
   }
 
-.honk-titlefont {
-    font-family: "Honk", system-ui;
-    font-optical-sizing: auto;
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-      "MORF" 26,
-      "SHLN" 34.9;
-      font-size: 45px
   }
+  
 
   .mukta-regular {
     font-family: "Mukta", sans-serif;
@@ -125,18 +123,35 @@ body {
     color: black;
 }
 
+#trivia-brand {
+    font-size: 45px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(90deg ,var(--main) 20%, var(--font));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
 #category-dropdown {
+    color: var(--black);
     background-color: var(--option);
 }
 
 #difficulty-dropdown {
-    background-color: var(--option);
+    color: var(--black);
+    background-color: var(--again);
 }
 
 #category-dog {
-    background-color: var(--option);
+    color: var(--black);
+    background-color: var(--font);
 }
 
+option {
+    color: var(--black);
+}
 /* score */
 .box {
     padding: 20px;
