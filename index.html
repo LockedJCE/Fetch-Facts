@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Trivia!</title>
@@ -28,7 +29,7 @@
   
     <div class="navbar-item has-dropdown is-hoverable mukta-regular ">
       <a class="navbar-link">
-        Our Pages
+        <i class="fa fa-github"> Our Pages</i>
       </a>
       <div class="navbar-dropdown">
         <a class="navbar-item" href="https://github.com/DeceitfulDragon">
@@ -49,8 +50,8 @@
         <button class ="button is-medium is-danger is-rounded right-btn" id="reset-score">Reset Score</button>
       </div>
       <div class="navbar-end">
-        <button class="js-modal-trigger is-normal mr-3" data-target="trivia-settings">
-          Settings
+        <button class= "js-modal-trigger is-normal mr-3" data-target="trivia-settings">
+          <i class="fa fa-gear"> Settings</i>
         </button>
       </div>
     </div>
@@ -69,8 +70,6 @@
     </div>
   </section>
   <image id="dog-image" src="" alt="Image of a random dog for each answer you give"></image>
-  
-
   
   <div id="trivia-settings" class="modal">
     <div class="modal-background"></div>
