@@ -12,6 +12,11 @@
     color: var(--font);
 }
 
+body {
+    height: 100vh;
+
+}
+
 .honk-titlefont {
     font-family: "Honk", system-ui;
     font-optical-sizing: auto;
@@ -105,6 +110,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    max-height: 450px;
+    object-fit: contain;
 }
 
 .js-modal-trigger {
