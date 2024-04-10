@@ -13,6 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
     }
+
+    function dropdownDog() {
+      const categoriesUrl = 'https://dog.ceo/api/breeds/list/all';
+      fetch(categoriesUrl)
+          .then(response => response.json())
+          .then(data => {
+              const categoryDog = $('#category-dog');
+              Object.keys(data.message).forEach(breed => {
+
+                  // If there are sub breeds, add an option for each sub-breed
+                  if (data.message[breed].length > 0) {
+                      data.message[breed].forEach(subBreed => {
+                          categoryDog.append($('<option>').val(`${breed} ${subBreed}`).text(`${breed} ${subBreed}`));
+                      });
+                  } else {
+                      // If there are no sub breeds, just add the breed
+                      categoryDog.append($('<option>').val(breed).text(breed));
+                  }
+              });
+          })
+    }
     // Fill difficulty dropdown
     function dropdownDifficulties() {
         const difficulties = ['Easy', 'Medium', 'Hard'];
@@ -27,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call both those functions
     dropdownCategories();
     dropdownDifficulties();
+    dropdownDog()
 
 
     // Functions to open and close a modal

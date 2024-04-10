@@ -13,6 +13,7 @@ function shuffleArray(array) {
 // Play again button
 playButton.on('click', function() {
     fetchTriviaQuestion();
+    fetchDogImage();
 });
 
 resetButton.on('click', function() {
@@ -29,10 +30,9 @@ $(document).ready(function() {
 
 // Something I found online to decode HTML since our API is encoded
 function decodeHtmlEntities(text) {
-    // Create a temporary div element
+    // Temporary div element
     var tempDiv = document.createElement("div");
-    // Set the encoded HTML as the text of the div
     tempDiv.innerHTML = text;
-    // Extract and return the decoded text from the div
+    // Rreturn the decoded text from the div
     return tempDiv.textContent || tempDiv.innerText || "";
 }

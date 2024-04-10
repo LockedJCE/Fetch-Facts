@@ -76,7 +76,7 @@
   
         <div class="modal-content">
           <div class="field">
-            <label class="label">Category:</label>
+            <label class="label">Trivia Category:</label>
             <div class="control">
               <div class="select">
                 <select id="category-dropdown">
@@ -87,7 +87,7 @@
             </div>
           </div>
           <div class="field">
-            <label class="label">Difficulty:</label>
+            <label class="label">Trivia Difficulty:</label>
             <div class="control">
               <div class="select">
                 <select id="difficulty-dropdown">
@@ -98,11 +98,22 @@
             </div>
           </div>
         </div>
+        <div class="field">
+          <label class="label">Dog Image Breed:</label>
+          <div class="control">
+            <div class="select">
+              <select id="category-dog">
+                  <option value="any">Any Dog</option>
+                <!-- Dog breeds will be filled here -->
+              </select>
+            </div>
+          </div>
+        </div>
       
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <div id ="total-score" class="box"></div>
+  <footer id ="total-score" class="box"></footer>
 
 <script src="./assets/js/dog.js"></script>
 <script src="./assets/js/utility.js"></script>
