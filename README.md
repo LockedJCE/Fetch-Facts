@@ -23,7 +23,7 @@ You can find the deployed web page for this project [here!](https://lockedjce.gi
 ![Screenshot](./assets/images/screenshot2.png "Screenshot 2")
 
 ## Credits
-[LockedJCE](https://github.com/LockedJCE) - HTML, CSS, Bulma
-[DeceitfulDragon](https://github.com/DeceitfulDragon) - JavaScript, JQuery
-[mariedevoll](https://github.com/mariedevoll) - HTML, CSS, Bulma
+- [LockedJCE](https://github.com/LockedJCE) - HTML, CSS, Bulma
+- [DeceitfulDragon](https://github.com/DeceitfulDragon) - JavaScript, JQuery
+- [mariedevoll](https://github.com/mariedevoll) - HTML, CSS, Bulma
 
