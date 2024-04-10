@@ -68,7 +68,7 @@ body {
 
 /* area with play again and reset score buttons */
 #play-again {
-    background-color: var(--play);
+    background-color: var(--font);
 }
 
 #reset-score {
@@ -140,4 +140,20 @@ body {
 
 .navbar-link {
     color: var(--font);
+}
+
+.navbar-item.center {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 200px;
+   
+}
+
+.left-btn {
+    margin-right: 5px;
+}
+
+.right-btn {
+    margin-left: 5px;
 }
