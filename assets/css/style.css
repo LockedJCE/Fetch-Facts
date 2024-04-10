@@ -8,11 +8,11 @@
 }
 
 * {
-    background-color: var(--main);
     color: var(--font);
 }
 
 body {
+    background-color: var(--main);
     height: 100vh;
 
 }
@@ -132,6 +132,11 @@ body {
     position: fixed;
 }
 
+.result-header {
+    text-align: center;
+    font-size: 25px;
+}
+
 #dog-image {
     display: block;
     margin-left: auto;
@@ -145,10 +150,16 @@ body {
     color: var(--font);
 }
 
+.navbar {
+    color: #abb1bf;
+}
+
 .navbar-link {
     color: var(--font);
 }
 
+
+/* Space Buttons Centered and Evenly */
 .navbar-item.center {
     flex-grow: 1;
     flex-direction: row;
@@ -156,11 +167,9 @@ body {
     margin-right: 200px;
    
 }
-
 .left-btn {
     margin-right: 5px;
 }
-
 .right-btn {
     margin-left: 5px;
 }
