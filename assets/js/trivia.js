@@ -50,7 +50,7 @@ function displayQuestion(questionData) {
 
     options.forEach(option => {
         const listItem = $('<li>');
-        const button = $('<button>').addClass('quiz-option-button button').text(option);
+        const button = $('<button>').addClass('quiz-option-button button is-rounded').text(option);
 
         // Event listener for answer checking
         button.on('click', function() {
@@ -74,10 +74,10 @@ function checkAnswer(selectedOption, correctAnswer) {
     const resultHeader = $('<h2>').addClass('result-header');
 
     if (selectedOption === correctAnswer) {
-        resultHeader.text('Good job!').addClass('has-text-success');
+        resultHeader.text('Correct, good job!').addClass('has-text-success');
         score++;
     } else {
-        resultHeader.text(`Incorrect. The correct answer was: ${correctAnswer}`).addClass('has-text-danger');
+        resultHeader.text(`Incorrect, the correct answer was: ${correctAnswer}`).addClass('has-text-danger');
         score--;
     }
     fetchDogImage();
