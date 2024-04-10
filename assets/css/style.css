@@ -8,8 +8,12 @@
 }
 
 * {
-    background-color: var(--main);
     color: var(--font);
+}
+
+body {
+    background-color: var(--main);
+    height: 100vh;
 }
 
 .honk-titlefont {
@@ -21,6 +25,12 @@
       "MORF" 26,
       "SHLN" 34.9;
       font-size: 45px
+  }
+
+  .mukta-regular {
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 /* area with quiz question and quiz options */
 .container {
@@ -38,12 +48,39 @@
 .quiz-buttons {
     bottom: 0;
     width: 100%;
-    padding: 10%;
+    padding: 5%;
 }
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quiz-options li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.quiz-option-button {
+    width: 100%;
+    padding: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for quiz buttons */
+.quiz-option-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 /* area with play again and reset score buttons */
 #play-again {
-    background-color: var(--play);
+    background-color: var(--font);
 }
 
 #reset-score {
@@ -100,17 +137,44 @@
     position: fixed;
 }
 
+.result-header {
+    text-align: center;
+    font-size: 25px;
+}
+
 #dog-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    max-height: 450px;
+    object-fit: contain;
 }
 
 .js-modal-trigger {
     color: var(--font);
 }
 
+.navbar {
+    color: #abb1bf;
+}
+
 .navbar-link {
     color: var(--font);
+}
+
+
+/* Space Buttons Centered and Evenly */
+.navbar-item.center {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 200px;
+   
+}
+.left-btn {
+    margin-right: 5px;
+}
+.right-btn {
+    margin-left: 5px;
 }
