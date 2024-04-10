@@ -133,6 +133,10 @@ body {
     background-color: var(--option);
 }
 
+#category-dog {
+    background-color: var(--option);
+}
+
 /* score */
 .box {
     padding: 20px;
