@@ -40,14 +40,17 @@ function fetchTriviaQuestion() {
     });
 }
 
+// For displaying the question text and answer buttons
 function displayQuestion(questionData) {
     questionHeader.text(questionData.question);
     quizOptions.empty();
     resultDiv.empty()
 
+    // Get all of our answer choices into an array, then shuffle it
     const options = [questionData.correct_answer, ...questionData.incorrect_answers];
     shuffleArray(options);
 
+    // create a button in the list for each of our answers, whether it's 1 answer or 10!
     options.forEach(option => {
         const listItem = $('<li>');
         const button = $('<button>').addClass('quiz-option-button button is-rounded').text(option);
@@ -55,7 +58,7 @@ function displayQuestion(questionData) {
         // Event listener for answer checking
         button.on('click', function() {
             checkAnswer(option, questionData.correct_answer);
-            disableOptions();
+            disableOptions(); // if any button is pressed, disable all the buttons
         });
 
         listItem.append(button);
