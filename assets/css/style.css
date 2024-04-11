@@ -209,3 +209,39 @@ option {
     padding: 10px 0;
     background-color: var(--grayblack);
 }
+
+/* Attempt at making it reponsive to small screens */
+@media (max-width: 768px) {
+    .navbar-dropdown {
+        max-height: 200px;
+    }
+
+    #dog-image {
+        width: 50%;
+    }
+
+    .navbar-item.center {
+        margin-right: 0;
+    }
+
+    /* quiz buttons / questions */
+    .quiz-options {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .quiz-option-button, #play-again, #reset-score {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .quiz-question {
+        font-size: 1.5rem;
+    }
+
+    /* footer size / padding */
+    #total-score {
+        padding: 5px 0;
+        font-size: 0.8rem;
+    }
+}
