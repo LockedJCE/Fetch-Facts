@@ -7,15 +7,18 @@
     --again: #719ff4;
     --black: #000000;
     --dark: #abb1bf;
+    --grayblack: #14161A;
 }
 
 * {
     color: var(--font);
 }
 
-body {
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
     background-color: var(--main);
-    height: 100vh;
 }
 
 #grad {
@@ -152,15 +155,6 @@ body {
 option {
     color: var(--black);
 }
-/* score */
-.box {
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-}
 
 .result-header {
     text-align: center;
@@ -204,6 +198,14 @@ option {
     margin-left: 5px;
 }
 
+
+/* Score footer */
 #total-score {
     color: var(--font);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--grayblack);
 }
