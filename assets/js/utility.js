@@ -12,15 +12,9 @@ function shuffleArray(array) {
 
 // Play again button
 playButton.on('click', function() {
-    // Begin timeout to prevent being rate limited
-    $(this).prop('disabled', true);
-    // setTimeout
-    setTimeout(function() {
-        playButton.prop('disabled', false);
-    }, 6000);
-
     fetchTriviaQuestion();
     fetchDogImage();
+    triviaTimeout();
 });
 
 resetButton.on('click', function() {
@@ -35,6 +29,16 @@ $(document).ready(function() {
     displayScore();
     triviaTimeout();
 });
+
+function triviaTimeout() {
+    // Begin timeout to prevent being rate limited
+    $(this).prop('disabled', true);
+    // setTimeout
+    setTimeout(function() {
+        playButton.prop('disabled', false);
+    }, 6000);
+    
+}
 
 // Something I found online to decode HTML since our API is encoded
 function decodeHtmlEntities(text) {
