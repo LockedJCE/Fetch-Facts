@@ -53,7 +53,9 @@ function displayQuestion(questionData) {
     // create a button in the list for each of our answers, whether it's 1 answer or 10!
     options.forEach(option => {
         const listItem = $('<li>');
-        const button = $('<button>').addClass('quiz-option-button button is-rounded').text(option);
+        const button = $('<button>')
+        .addClass('quiz-option-button button is-rounded')
+        .text(option);
 
         // Event listener for answer checking
         button.on('click', function() {
